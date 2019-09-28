@@ -1,0 +1,29 @@
+<ion-content >
+  <div class="bungkus">
+    <form #form="ngForm" (ngSubmit)="login(form)">
+      <ion-grid>
+        <ion-row color="primary" justify-content-center>
+          <ion-col align-self-center>
+            <div text-center>
+              <h3>Login</h3>
+            </div>
+            <div padding>
+              <ion-item>
+                <ion-input name="email" type="email" placeholder="nama@email.com" ngModel required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+              </ion-item>
+            </div>
+            <div padding>
+              <ion-button size="medium" type="submit" [disabled]="form.invalid" expand="block" color="success">Login</ion-button>
+            </div>
+            <div padding>
+              Don't have account ? Registers
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+</ion-content>
